@@ -15,10 +15,10 @@ npm install express-text-encryptor
 const express = require('express');
 const app = express();
 const {encrypt, decrypt} = require('express-text-encryptor');
-app.use(expressip().getIpInfoMiddleware);
 
 app.get('/', function (req, res) {
-    res.send(req.ipInfo);
+    const dataToEncrypt = encrypt('This is a sample text')
+    res.send(`Encrypted text is ${dataToEncrypt} and Decrypted text is ${decrypt(dataToEncrypt)}`)
 });
 
 ```
