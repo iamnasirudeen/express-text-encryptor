@@ -1,4 +1,4 @@
-# Express IP
+# Express Text Encryptor
 
 This is an express module for Encrypting and Decrypting text in node js.
 
