@@ -26,7 +26,6 @@ app.get('/', function (req, res) {
 ```
 const express = require('express');
 const app = express();
-const expressip = require('express-ip');
 const PORT = process.env.PORT || 7000;
 const path = require('path');
 
