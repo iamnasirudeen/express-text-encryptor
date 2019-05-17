@@ -18,7 +18,7 @@ const {encrypt, decrypt} = require('express-text-encryptor');
 
 app.get('/', function (req, res) {
     const dataToEncrypt = encrypt('This is a sample text')
-    res.send(`Encrypted text is ${dataToEncrypt} and Decrypted text is ${decrypt(dataToEncrypt)}`)
+    res.send(`Encrypted text is ${JSON.stringify(dataToEncrypt)} and Decrypted text is ${decrypt(dataToEncrypt)}`)
 });
 
 ```
@@ -34,7 +34,7 @@ app.set("PORT", PORT);
 
 app.get('/', function (req, res) {
     const dataToEncrypt = encrypt('This is a sample text')
-    res.send(`Encrypted text is ${dataToEncrypt} and Decrypted text is ${decrypt(dataToEncrypt)}`)
+    res.send(`Encrypted text is ${JSON.stringify(dataToEncrypt)} and Decrypted text is ${decrypt(dataToEncrypt)}`)
 });
 
 app.listen(app.get('PORT'), function () {
